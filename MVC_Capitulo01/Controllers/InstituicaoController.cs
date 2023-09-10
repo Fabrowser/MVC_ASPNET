@@ -82,7 +82,7 @@ namespace MVC_Capitulo01.Controllers
                 {
                     _context.Update(instituicao);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Edit");
+                    return RedirectToAction("Index");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
