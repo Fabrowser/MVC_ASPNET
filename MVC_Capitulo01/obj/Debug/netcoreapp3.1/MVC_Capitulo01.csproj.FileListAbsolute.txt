@@ -132,7 +132,6 @@ C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\MVC_Capitulo01.TagHelpers.input.cache
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\MVC_Capitulo01.TagHelpers.output.cache
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\MVC_Capitulo01.RazorCoreGenerate.cache
-C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -159,3 +158,5 @@ C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\scopedcss\bundle\MVC_Capitulo01.styles.css
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Delete.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutIES.cshtml.g.cs
