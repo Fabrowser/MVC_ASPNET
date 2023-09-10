@@ -22,7 +22,7 @@ namespace MVC_Capitulo01.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Departamentos.OrderBy(c =>
-            c.Nome).ToListAsync());
+            c.DepartamentoID).ToListAsync());
         }
 
         public async Task<IActionResult> Create()
