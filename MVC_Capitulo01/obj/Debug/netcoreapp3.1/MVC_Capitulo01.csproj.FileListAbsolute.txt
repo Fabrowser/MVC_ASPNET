@@ -154,8 +154,6 @@ C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Details.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Details.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Delete.cshtml.g.cs
-C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\staticwebassets\MVC_Capitulo01.StaticWebAssets.xml
-C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\scopedcss\bundle\MVC_Capitulo01.styles.css
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Delete.cshtml.g.cs
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\fabri\source\repos\MVC_Capitulo01\MVC_Capitulo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs

@@ -145,6 +145,7 @@ namespace MVC_Capitulo01.Controllers
             return View(departamento);
         }
 
+
         [HttpPost, ActionName("Delete")]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long? id)

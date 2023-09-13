@@ -138,15 +138,18 @@ namespace MVC_Capitulo01.Controllers
             return View(instituicao);
         }
 
+
+        // POST: Instituicao/Delete/1
         [HttpPost, ActionName("Delete")]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long? id)
         {
 
-            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(i => i.InstituicaoID == id);
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(m => m.InstituicaoID == id);
 
             _context.Instituicoes.Remove(instituicao);
             await _context.SaveChangesAsync();
+            TempData["Message"] = "Instituicao " + instituicao.Nome.ToUpper() + " foi removida";
             return RedirectToAction(nameof(Index));
 
         }
