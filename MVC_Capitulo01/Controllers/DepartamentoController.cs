@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVC_Capitulo01.Data;
 using MVC_Capitulo01.Models;
@@ -21,20 +22,27 @@ namespace MVC_Capitulo01.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Departamentos.OrderBy(c =>
-            c.Nome).ToListAsync());
+            return View(await _context.Departamentos.Include(i => i.Instituicao).OrderBy(c => c.Nome).ToListAsync());
         }
 
         public async Task<IActionResult> Create()
         {
 
+            var instituicoes = _context.Instituicoes.OrderBy(i => i.Nome).ToList();
+            instituicoes.Insert(0, new Instituicao()
+            {
+                InstituicaoID = 0,
+                Nome = "Selecione a instituição"
+            });
+            ViewBag.Instituicoes = instituicoes;
             return View();
+
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome")] Departamento departamento)
+        public async Task<IActionResult> Create([Bind("Nome, InstituicaoID")] Departamento departamento)
         {
             try
             {
@@ -69,13 +77,15 @@ namespace MVC_Capitulo01.Controllers
                 return NotFound();
             }
 
+            ViewBag.Instituicoes = new SelectList(_context.Instituicoes.OrderBy(b => b.Nome), "InstituicaoID", "Nome", departamento.InstituicaoID);
+
             return View(departamento);
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long? id, [Bind("DepartamentoID,Nome")] Departamento departamento)
+        public async Task<IActionResult> Edit(long? id, [Bind("DepartamentoID,Nome, InstituicaoID")] Departamento departamento)
         {
 
             if (id != departamento.DepartamentoID)
@@ -105,6 +115,8 @@ namespace MVC_Capitulo01.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+            ViewBag.Instituicoes = new SelectList(_context.Instituicoes.OrderBy(b => b.Nome), "InstituicaoID", "Nome", departamento.InstituicaoID);
+
             return View(departamento);
 
         }
@@ -122,6 +134,10 @@ namespace MVC_Capitulo01.Controllers
                 return NotFound();
             }
             var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoID == id);
+
+            _context.Instituicoes.Where(i => departamento.InstituicaoID == i.InstituicaoID).Load();
+
+
             if (departamento == null)
             {
                 return NotFound();
@@ -138,6 +154,7 @@ namespace MVC_Capitulo01.Controllers
             }
 
             var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoID == id);
+            _context.Instituicoes.Where(i => departamento.InstituicaoID == i.InstituicaoID).Load();
             if (departamento == null)
             {
                 return NotFound();
@@ -152,6 +169,8 @@ namespace MVC_Capitulo01.Controllers
         {
 
             var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoID == id);
+            _context.Departamentos.Remove(departamento);
+            TempData["Message"] = "Departamento " + departamento.Nome.ToUpper() + " foi removido";
 
             _context.Departamentos.Remove(departamento);
             await _context.SaveChangesAsync();
